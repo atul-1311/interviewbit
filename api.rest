@@ -1,0 +1,72 @@
+POST http://localhost:5000/api/create-mentor HTTP/1.1
+Content-Type: application/json
+
+{
+    "mentorId": "E",
+    "mentorName": "Nisha"
+}
+
+###
+
+POST http://localhost:5000/api/create-student HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentId": "20BCS4859",
+    "studentName": "Jivat",
+    "cgpa": "7.98"
+}
+
+###
+POST http://localhost:5000/api/add-student HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentId" : "64275911c627a13a2ddf26d9",
+    "mentorId": "642758f9c627a13a2ddf26d3"
+}
+
+###
+POST http://localhost:5000/api/remove-student HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentId" : "642729d481cb368168c3ddf2",
+    "mentorId": "64272a861e469cdeb649ab57"
+}
+
+### 
+POST http://localhost:5000/api/submit HTTP/1.1
+Content-Type: application/json
+
+{
+    "mentorId": "642758f9c627a13a2ddf26d3"
+}
+
+### 
+POST http://localhost:5000/api/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentId": "6427374f171bac1ba90e9f13", 
+    "Ideation": 7, 
+    "Execution": 8, 
+    "Viva": 4, 
+    "Presentation":9
+}
+
+###
+GET http://localhost:5000/mentors HTTP/1.1
+Content-Type: application/json
+
+{
+
+}
+
+###
+GET http://localhost:5000/students HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}

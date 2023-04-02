@@ -1,0 +1,50 @@
+.hero{
+    margin: 5vh 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%
+}
+
+.wrapper{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+}
+
+.myButton{
+    margin-top: 5vh;
+    width: 100%;
+    padding: 5vh 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit{
+    background: darkcyan;
+    color: white;
+    padding: 10px 60px;
+    border: 1px darkcyan solid;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.submit:hover{
+    background: rgb(1, 117, 117);
+    cursor: pointer;
+}
+
+@media (max-width: 1080px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 3rem;
+    }
+}
+
+@media (max-width: 500px){
+    .hero{
+        margin: 10vh 0vh;
+    }
+}
