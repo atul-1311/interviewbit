@@ -23,6 +23,7 @@ const Card = ({student, status}) => {
      return (
         <>
         {
+            // if status is 0, render all students
             status===0 && <div className={styles.cardWrapper}>
             <div className={styles.card}>
                 <div className={styles.avatar}>
@@ -45,6 +46,7 @@ const Card = ({student, status}) => {
             </div>
         }
         {
+            // if status is 1, render assigned students
             status===1 && student.assigned && <div className={styles.cardWrapper}>
             <div className={styles.card}>
                 <div className={styles.avatar}>
@@ -67,6 +69,7 @@ const Card = ({student, status}) => {
             </div>
         }
         {
+            // if status is 2, render not assigned students
             status===2 && !student.assigned && <div className={styles.cardWrapper}>
             <div className={styles.card}>
                 <div className={styles.avatar}>

@@ -5,6 +5,9 @@ import NavBar from './Components/Shared/NavBar/NavBar';
 import Students from './pages/Students/Students';
 import MyStudents from './pages/MyStudents/MyStudents';
 
+
+// All routes
+
 function App() {
     return <BrowserRouter>
                 <NavBar />

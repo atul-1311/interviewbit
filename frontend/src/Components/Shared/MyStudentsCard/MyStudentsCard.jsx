@@ -9,10 +9,14 @@ import { useNavigate } from 'react-router-dom';
 const MyStudentsCard = ({ student }) => {
 
   const studentId = student._id;
+  let submitted = false;
+
+  // State Values
   const mentorId = useSelector((state)=> state.mentorSlice.mentor._id);
   let noOfStudents = useSelector((state)=> state.mentorSlice.mentor.studentIds);
-  let submitted = false;
   submitted = useSelector((state)=> state.mentorSlice.mentor.submit);
+
+  // React States
   const [ideation, setIdeation] = useState(student.marks.Ideation);
   const [viva, setViva] = useState(student.marks.Viva);
   const [execution, setExecution] = useState(student.marks.Execution);
@@ -21,6 +25,7 @@ const MyStudentsCard = ({ student }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  // Update student
   async function update(){
     const { data } = await updateMarks({ studentId, ideation, viva, execution, presentation  })
     console.log(data);

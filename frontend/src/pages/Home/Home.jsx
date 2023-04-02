@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Home.module.css'
 import Card from '../../Components/Shared/MentorCard/Card'
 import { getMentors } from '../../http';
 
 const Home = () => {
 
+    // Get Mentors
     const [mentors, setMentors] = useState([]);
     
     useEffect(() => {

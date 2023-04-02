@@ -7,9 +7,11 @@ import { setMentorStudents } from '../../Store/studentSlice';
 
 const Students = () => {
 
+    // Get All Students
     const [students, setStudents] = useState([]);
     const [status, setStatus] = useState(0);
 
+    // Filter Statuses
     function stAssigned(){
         setStatus(1);
     }
@@ -22,7 +24,10 @@ const Students = () => {
         setStatus(0);
     }
 
+
     useEffect(() => {
+
+        // Api Call
         async function allStudents(){
             const { data } = await getStudents();
             console.log(data);
